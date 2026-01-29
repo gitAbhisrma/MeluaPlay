@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: 
+
+Sitemap: https://meluaplay.com/sitemap.xml
+
+# Crawl Delay (optional - 1 second delay between requests)
+Crawl-delay: 1
+
+# Allow fast crawling by Google
+User-agent: Googlebot
+Crawl-delay: 0
