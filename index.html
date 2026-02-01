@@ -740,6 +740,60 @@
             background: var(--success);
         }
 
+        /* Payment Tabs Styles */
+        .payment-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--surface-light);
+        }
+
+        .payment-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .payment-tab-btn:hover {
+            color: var(--text);
+        }
+
+        .payment-tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .payment-tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .payment-tab-content.active {
+            display: block;
+        }
+
+        .paypal-info {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: var(--border-radius);
+            border: 2px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .paypal-info a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -1112,24 +1166,48 @@
             <p style="margin-top: 20px; font-size: 12px;">Works with most direct video links and streaming formats</p>
         </footer>
 
-        <!-- QR Code Modal -->
+        <!-- Donate Modal -->
         <div class="qr-modal" id="qrModal">
             <div class="qr-modal-content">
                 <span class="qr-close" id="qrClose">&times;</span>
-                <h2>Support Us - Donate via UPI</h2>
-                <p style="margin-bottom: 20px; color: var(--text-secondary);">Show your support by donating through UPI</p>
+                <h2>Support Us - Donate</h2>
+                <p style="margin-bottom: 20px; color: var(--text-secondary);">Choose your preferred payment method</p>
                 
-                <div class="qr-code-container">
-                    <img id="qrCodeImage" src="" alt="UPI QR Code for meluaplay@airtel" class="qr-code-image" loading="lazy">
+                <!-- Payment Method Tabs -->
+                <div class="payment-tabs">
+                    <button class="payment-tab-btn active" data-tab="upi">
+                        <i class="fas fa-mobile-alt"></i> UPI
+                    </button>
+                    <button class="payment-tab-btn" data-tab="paypal">
+                        <i class="fab fa-paypal"></i> PayPal
+                    </button>
                 </div>
                 
-                <div class="upi-info">
-                    <p style="margin-bottom: 10px; color: var(--text-secondary);">UPI ID:</p>
-                    <div class="upi-id-box">
-                        <span id="upiIdText">meluaplay@airtel</span>
-                        <button id="copyUpiBtn" class="copy-btn" title="Copy UPI ID">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
+                <!-- UPI Tab -->
+                <div class="payment-tab-content active" id="upi-tab">
+                    <div class="qr-code-container">
+                        <img id="qrCodeImage" src="" alt="UPI QR Code for meluaplay@airtel" class="qr-code-image" loading="lazy">
+                    </div>
+                    
+                    <div class="upi-info">
+                        <p style="margin-bottom: 10px; color: var(--text-secondary);">UPI ID:</p>
+                        <div class="upi-id-box">
+                            <span id="upiIdText">meluaplay@airtel</span>
+                            <button id="copyUpiBtn" class="copy-btn" title="Copy UPI ID">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PayPal Tab -->
+                <div class="payment-tab-content" id="paypal-tab">
+                    <div class="paypal-info">
+                        <i class="fab fa-paypal" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;"></i>
+                        <p style="margin-bottom: 15px; color: var(--text-secondary);">Donate securely via PayPal</p>
+                        <a href="https://www.paypal.com/ncp/payment/5WDTYQLB5ZZ4G" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-external-link-alt"></i> Open PayPal
+                        </a>
                     </div>
                 </div>
                 
@@ -1714,6 +1792,25 @@
             const copyUpiBtn = document.getElementById('copyUpiBtn');
             const upiIdText = document.getElementById('upiIdText');
             
+            // Payment tabs
+            const paymentTabBtns = document.querySelectorAll('.payment-tab-btn');
+            const paymentTabContents = document.querySelectorAll('.payment-tab-content');
+            
+            // Payment tab switching
+            paymentTabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabName = btn.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    paymentTabBtns.forEach(b => b.classList.remove('active'));
+                    paymentTabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    btn.classList.add('active');
+                    document.getElementById(tabName + '-tab').classList.add('active');
+                });
+            });
+            
             // UPI ID
             const upiId = 'meluaplay@airtel';
             
@@ -1897,5 +1994,4 @@
         });
     </script>
 </body>
-
 </html>
