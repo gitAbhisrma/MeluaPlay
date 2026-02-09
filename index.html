@@ -38,7 +38,7 @@
             --border-radius: 12px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-            
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: var(--bg);
@@ -46,6 +46,67 @@
             line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .ad-slot {
+            background: var(--surface);
+            border: 2px dashed var(--surface-light);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-slot-left {
+            position: fixed;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 500px;
+            z-index: 50;
+        }
+
+        .ad-slot-right {
+            position: fixed;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 500px;
+            z-index: 50;
+        }
+
+        .ad-slot-bottom {
+            width: 100%;
+            min-height: 100px;
+            margin: 20px 0 20px 0;
+            padding: 20px;
+        }
+
+        .ad-placeholder {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 10px;
+        }
+
+        .ad-placeholder i {
+            font-size: 32px;
+            color: var(--primary);
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+
+        .ad-placeholder p {
+            margin: 5px 0;
+            font-size: 13px;
+        }
+
+        .ad-placeholder p strong {
+            color: var(--text);
         }
 
         .container {
@@ -438,38 +499,40 @@
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .feature-card {
             background: var(--surface);
             border-radius: var(--border-radius);
-            padding: 25px;
+            padding: 10px 8px;
             text-align: center;
             transition: var(--transition);
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
 
         .feature-icon {
-            font-size: 32px;
+            font-size: 20px;
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 4px;
         }
 
         .feature-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            font-weight: 600;
         }
 
         .feature-card p {
             color: var(--text-secondary);
-            font-size: 14px;
+            font-size: 11px;
+            line-height: 1.3;
         }
 
         footer {
@@ -513,6 +576,11 @@
 
         /* Mobile optimizations */
         @media (max-width: 768px) {
+            .ad-slot-left,
+            .ad-slot-right {
+                display: none;
+            }
+
             .container {
                 padding: 15px;
             }
@@ -547,8 +615,21 @@
                 display: none;
             }
             
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
             .feature-card {
-                padding: 20px;
+                padding: 12px;
+            }
+
+            .feature-icon {
+                font-size: 20px;
+            }
+
+            .feature-card h3 {
+                font-size: 0.9rem;
             }
             
             .control-btn.big {
@@ -995,6 +1076,26 @@
     </style>
 </head>
 <body>
+    <!-- Ad Slot - Left Side -->
+    <div class="ad-slot ad-slot-left">
+        <div class="ad-placeholder">
+            <i class="fas fa-image"></i>
+            <p><strong>Advertise Here</strong></p>
+            <p style="font-size: 12px; margin-top: 8px;">Your Brand Logo & Link</p>
+            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+        </div>
+    </div>
+
+    <!-- Ad Slot - Right Side -->
+    <div class="ad-slot ad-slot-right">
+        <div class="ad-placeholder">
+            <i class="fas fa-image"></i>
+            <p><strong>Advertise Here</strong></p>
+            <p style="font-size: 12px; margin-top: 8px;">Your Brand Logo & Link</p>
+            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <div class="logo">
@@ -1154,6 +1255,16 @@
                 </div>
             </div>
         </main>
+
+        <!-- Ad Slot - Bottom/Lower Side -->
+        <div class="ad-slot ad-slot-bottom">
+            <div class="ad-placeholder">
+                <i class="fas fa-image"></i>
+                <p><strong>📢 Advertise Your Brand Here</strong></p>
+                <p style="font-size: 13px; margin-top: 8px;">Perfect placement for brand logos & promotional links</p>
+                <p style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">Reach thousands of video streaming users | Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+            </div>
+        </div>
 
         <footer>
             <p>MeluaPlay - Instant Online Video Player</p>
@@ -1986,21 +2097,10 @@
             // PWA ready
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js').catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
+                    // Service worker registration disabled
                 });
             }
         });
-    </script> 
-    
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
