@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1S09NJ6DR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1S09NJ6DR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-C1S09NJ6DR');
-</script>
+        gtag('config', 'G-C1S09NJ6DR');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
@@ -354,7 +355,8 @@
             gap: 15px;
         }
 
-        .left-controls, .right-controls {
+        .left-controls,
+        .right-controls {
             display: flex;
             align-items: center;
             gap: 15px;
@@ -460,9 +462,17 @@
         }
 
         @keyframes fadeOut {
-            0% { opacity: 1; }
-            70% { opacity: 1; }
-            100% { opacity: 0; }
+            0% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
 
         .rotate-notice {
@@ -493,8 +503,15 @@
         }
 
         @keyframes rotateAnimation {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(90deg); }
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(90deg);
+            }
         }
 
         .features {
@@ -576,6 +593,7 @@
 
         /* Mobile optimizations */
         @media (max-width: 768px) {
+
             .ad-slot-left,
             .ad-slot-right {
                 display: none;
@@ -584,37 +602,38 @@
             .container {
                 padding: 15px;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .url-input-container {
                 flex-direction: column;
             }
-            
+
             #videoUrl {
                 width: 100%;
             }
-            
+
             .btn {
                 width: 100%;
                 justify-content: center;
             }
-            
+
             .controls-row {
                 justify-content: center;
             }
-            
-            .left-controls, .right-controls {
+
+            .left-controls,
+            .right-controls {
                 justify-content: space-around;
                 width: 100%;
             }
-            
+
             .volume-container {
                 display: none;
             }
-            
+
             .features {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
@@ -631,7 +650,7 @@
             .feature-card h3 {
                 font-size: 0.9rem;
             }
-            
+
             .control-btn.big {
                 width: 50px;
                 height: 50px;
@@ -643,11 +662,11 @@
             .url-input-section {
                 padding: 20px;
             }
-            
+
             .features {
                 grid-template-columns: 1fr;
             }
-            
+
             .time-display {
                 font-size: 12px;
             }
@@ -659,13 +678,13 @@
             margin: 0;
             height: 100vh;
         }
-        
+
         :-webkit-full-screen .player-container {
             border-radius: 0;
             margin: 0;
             height: 100vh;
         }
-        
+
         :-moz-full-screen .player-container {
             border-radius: 0;
             margin: 0;
@@ -697,8 +716,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* QR Modal Styles */
@@ -876,16 +900,22 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
-            from { 
+            from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-            to { 
+
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
@@ -1075,6 +1105,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Ad Slot - Left Side -->
     <div class="ad-slot ad-slot-left">
@@ -1082,7 +1113,9 @@
             <i class="fas fa-image"></i>
             <p><strong>Advertise Here</strong></p>
             <p style="font-size: 12px; margin-top: 8px;">Your Brand Logo & Link</p>
-            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a
+                    href="mailto:melusharma265@gmail.com"
+                    style="color: var(--primary); text-decoration: none;">melusharma265@gmail.com</a></p>
         </div>
     </div>
 
@@ -1092,7 +1125,9 @@
             <i class="fas fa-image"></i>
             <p><strong>Advertise Here</strong></p>
             <p style="font-size: 12px; margin-top: 8px;">Your Brand Logo & Link</p>
-            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+            <p style="font-size: 11px; color: var(--text-secondary); margin-top: 5px;">Email: <a
+                    href="mailto:melusharma265@gmail.com"
+                    style="color: var(--primary); text-decoration: none;">melusharma265@gmail.com</a></p>
         </div>
     </div>
 
@@ -1109,7 +1144,9 @@
             <section class="url-input-section">
                 <div class="input-group">
                     <div class="url-input-container">
-                        <input type="url" id="videoUrl" placeholder="Paste video URL here (MP4, MKV, AVI, MOV, WEBM, M3U8, etc.)" autocomplete="off">
+                        <input type="url" id="videoUrl"
+                            placeholder="Paste video URL here (MP4, MKV, AVI, MOV, WEBM, M3U8, etc.)"
+                            autocomplete="off">
                         <button id="playBtn" class="btn btn-primary">
                             <i class="fas fa-play"></i> Play Video
                         </button>
@@ -1142,34 +1179,34 @@
                     <div class="loading-spinner"></div>
                     <p>Loading video...</p>
                 </div>
-                
+
                 <video id="videoPlayer" playsinline>
                     Your browser does not support the video tag.
                 </video>
-                
+
                 <div class="player-overlay" id="playerOverlay"></div>
-                
+
                 <div class="gesture-hint" id="gestureHint">
                     <div>Tap: Play/Pause</div>
                     <div>Double tap sides: Seek ±10s</div>
                     <div>Swipe: Seek forward/backward</div>
                 </div>
-                
+
                 <div class="fullscreen-indicator" id="fullscreenIndicator">
                     <i class="fas fa-expand"></i>
                     Auto Fullscreen Enabled
                 </div>
-                
+
                 <div class="controls-container">
                     <div class="progress-container" id="progressContainer">
                         <div id="progressBar"></div>
                     </div>
-                    
+
                     <div class="time-display">
                         <span id="currentTime">00:00</span>
                         <span id="duration">00:00</span>
                     </div>
-                    
+
                     <div class="controls-row">
                         <div class="left-controls">
                             <button id="playPauseBtn" class="control-btn big">
@@ -1185,7 +1222,7 @@
                                 <i class="fas fa-forward"></i>
                             </button>
                         </div>
-                        
+
                         <div class="right-controls">
                             <div class="volume-container">
                                 <button id="muteBtn" class="control-btn">
@@ -1193,7 +1230,7 @@
                                 </button>
                                 <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
                             </div>
-                            
+
                             <select id="speedSelect" class="speed-select">
                                 <option value="0.25">0.25x</option>
                                 <option value="0.5">0.5x</option>
@@ -1203,7 +1240,7 @@
                                 <option value="1.5">1.5x</option>
                                 <option value="2">2x</option>
                             </select>
-                            
+
                             <button id="fullscreenBtn" class="control-btn">
                                 <i class="fas fa-expand"></i>
                             </button>
@@ -1218,7 +1255,8 @@
                 </div>
                 <h2>Rotate to Landscape</h2>
                 <p>For the best viewing experience, please rotate your device to landscape mode.</p>
-                <p style="margin-top: 20px; color: #94a3b8; font-size: 14px;">Video will automatically play in fullscreen</p>
+                <p style="margin-top: 20px; color: #94a3b8; font-size: 14px;">Video will automatically play in
+                    fullscreen</p>
             </div>
 
             <div class="features">
@@ -1229,7 +1267,7 @@
                     <h3>Auto Fullscreen</h3>
                     <p>Video automatically enters fullscreen mode when playback starts for immersive viewing</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
@@ -1237,7 +1275,7 @@
                     <h3>Auto Rotate</h3>
                     <p>Automatically switches to landscape mode on mobile devices during playback</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-hand-point-up"></i>
@@ -1245,7 +1283,7 @@
                     <h3>Gesture Controls</h3>
                     <p>Tap, double-tap, and swipe gestures for intuitive mobile playback control</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
@@ -1262,7 +1300,9 @@
                 <i class="fas fa-image"></i>
                 <p><strong>📢 Advertise Your Brand Here</strong></p>
                 <p style="font-size: 13px; margin-top: 8px;">Perfect placement for brand logos & promotional links</p>
-                <p style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">Reach thousands of video streaming users | Email: <a href="mailto:meluaplay@gmail.com" style="color: var(--primary); text-decoration: none;">meluaplay@gmail.com</a></p>
+                <p style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">Reach thousands of video
+                    streaming users | Email: <a href="mailto:melusharma265@gmail.com"
+                        style="color: var(--primary); text-decoration: none;">melusharma265@gmail.com</a></p>
             </div>
         </div>
 
@@ -1283,7 +1323,7 @@
                 <span class="qr-close" id="qrClose">&times;</span>
                 <h2>Support Us - Donate</h2>
                 <p style="margin-bottom: 20px; color: var(--text-secondary);">Choose your preferred payment method</p>
-                
+
                 <!-- Payment Method Tabs -->
                 <div class="payment-tabs">
                     <button class="payment-tab-btn active" data-tab="upi">
@@ -1293,13 +1333,14 @@
                         <i class="fab fa-paypal"></i> PayPal
                     </button>
                 </div>
-                
+
                 <!-- UPI Tab -->
                 <div class="payment-tab-content active" id="upi-tab">
                     <div class="qr-code-container">
-                        <img id="qrCodeImage" src="" alt="UPI QR Code for meluaplay@airtel" class="qr-code-image" loading="lazy">
+                        <img id="qrCodeImage" src="" alt="UPI QR Code for meluaplay@airtel" class="qr-code-image"
+                            loading="lazy">
                     </div>
-                    
+
                     <div class="upi-info">
                         <p style="margin-bottom: 10px; color: var(--text-secondary);">UPI ID:</p>
                         <div class="upi-id-box">
@@ -1310,19 +1351,22 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- PayPal Tab -->
                 <div class="payment-tab-content" id="paypal-tab">
                     <div class="paypal-info">
-                        <i class="fab fa-paypal" style="font-size: 48px; color: var(--primary); margin-bottom: 15px;"></i>
+                        <i class="fab fa-paypal"
+                            style="font-size: 48px; color: var(--primary); margin-bottom: 15px;"></i>
                         <p style="margin-bottom: 15px; color: var(--text-secondary);">Donate securely via PayPal</p>
-                        <a href="https://www.paypal.com/ncp/payment/5WDTYQLB5ZZ4G" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                        <a href="https://www.paypal.com/ncp/payment/5WDTYQLB5ZZ4G" target="_blank"
+                            class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
                             <i class="fas fa-external-link-alt"></i> Open PayPal
                         </a>
                     </div>
                 </div>
-                
-                <p style="margin-top: 15px; color: var(--text-secondary); font-size: 12px;">Thank you for your support! 🙏</p>
+
+                <p style="margin-top: 15px; color: var(--text-secondary); font-size: 12px;">Thank you for your support!
+                    🙏</p>
             </div>
         </div>
 
@@ -1346,7 +1390,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Elements
             const videoPlayer = document.getElementById('videoPlayer');
             const videoUrlInput = document.getElementById('videoUrl');
@@ -1369,7 +1413,7 @@
             const fullscreenIndicator = document.getElementById('fullscreenIndicator');
             const rotateNotice = document.getElementById('rotateNotice');
             const loading = document.getElementById('loading');
-            
+
             // State variables
             let isFullscreen = false;
             let isPlaying = false;
@@ -1379,41 +1423,41 @@
             let hls = null;
             let dash = null;
             let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            
+
             // Initialize
             if (isMobile) {
                 document.body.classList.add('mobile');
                 gestureHint.style.display = 'block';
-                
+
                 // Hide gesture hint after 5 seconds
                 setTimeout(() => {
                     gestureHint.style.display = 'none';
                 }, 5000);
             }
-            
+
             // Format time
             function formatTime(seconds) {
                 const mins = Math.floor(seconds / 60);
                 const secs = Math.floor(seconds % 60);
                 return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
             }
-            
+
             // Update progress
             function updateProgress() {
                 if (!videoPlayer.duration) return;
-                
+
                 const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
                 progressBar.style.width = `${percent}%`;
                 currentTimeEl.textContent = formatTime(videoPlayer.currentTime);
             }
-            
+
             // Set video duration
             function setVideoDuration() {
                 if (videoPlayer.duration) {
                     durationEl.textContent = formatTime(videoPlayer.duration);
                 }
             }
-            
+
             // Play/pause toggle
             function togglePlayPause() {
                 if (videoPlayer.paused || videoPlayer.ended) {
@@ -1422,7 +1466,7 @@
                     videoPlayer.pause();
                 }
             }
-            
+
             // Enter fullscreen
             async function enterFullscreen() {
                 try {
@@ -1435,16 +1479,16 @@
                     } else if (playerContainer.msRequestFullscreen) {
                         await playerContainer.msRequestFullscreen();
                     }
-                    
+
                     isFullscreen = true;
                     playerContainer.classList.add('fullscreen-active');
-                    
+
                     // Show fullscreen indicator
                     fullscreenIndicator.style.display = 'block';
                     setTimeout(() => {
                         fullscreenIndicator.style.display = 'none';
                     }, 2000);
-                    
+
                     // Auto rotate on mobile
                     if (isMobile && window.screen.orientation && window.screen.orientation.lock) {
                         try {
@@ -1457,7 +1501,7 @@
                     console.log('Fullscreen error:', err);
                 }
             }
-            
+
             // Exit fullscreen
             async function exitFullscreen() {
                 try {
@@ -1470,9 +1514,9 @@
                     } else if (document.msExitFullscreen) {
                         await document.msExitFullscreen();
                     }
-                    
+
                     isFullscreen = false;
-                    
+
                     // Unlock orientation on mobile
                     if (isMobile && window.screen.orientation && window.screen.orientation.unlock) {
                         try {
@@ -1485,7 +1529,7 @@
                     console.log('Exit fullscreen error:', err);
                 }
             }
-            
+
             // Toggle fullscreen
             async function toggleFullscreen() {
                 if (!isFullscreen) {
@@ -1494,51 +1538,51 @@
                     await exitFullscreen();
                 }
             }
-            
+
             // Show controls
             function showControls() {
                 playerContainer.classList.add('touch-active');
                 clearTimeout(controlsTimeout);
-                
+
                 controlsTimeout = setTimeout(() => {
                     playerContainer.classList.remove('touch-active');
                 }, 3000);
             }
-            
+
             // Load and play video
             function loadVideo(url) {
                 if (!url.trim()) {
                     alert('Please enter a video URL');
                     return;
                 }
-                
+
                 // Clean up previous instances
                 if (hls) {
                     hls.destroy();
                     hls = null;
                 }
-                
+
                 if (dash) {
                     dash.reset();
                     dash = null;
                 }
-                
+
                 // Reset video
                 videoPlayer.pause();
                 videoPlayer.currentTime = 0;
                 videoPlayer.src = '';
-                
+
                 // Save to history
                 saveToHistory(url);
-                
+
                 // Show loading
                 loading.classList.remove('hidden');
                 playerContainer.classList.add('active');
-                
+
                 // Check if URL is HLS or DASH
                 const isHls = url.includes('.m3u8');
                 const isDash = url.includes('.mpd');
-                
+
                 if (isHls && Hls.isSupported()) {
                     // HLS stream
                     hls = new Hls({
@@ -1546,18 +1590,18 @@
                         lowLatencyMode: true,
                         backBufferLength: 90
                     });
-                    
+
                     hls.loadSource(url);
                     hls.attachMedia(videoPlayer);
-                    
+
                     hls.on(Hls.Events.MANIFEST_PARSED, () => {
                         videoPlayer.play().catch(e => console.log('Autoplay failed:', e));
                     });
-                    
+
                     hls.on(Hls.Events.ERROR, (event, data) => {
                         console.error('HLS error:', data);
                         if (data.fatal) {
-                            switch(data.type) {
+                            switch (data.type) {
                                 case Hls.ErrorTypes.NETWORK_ERROR:
                                     hls.startLoad();
                                     break;
@@ -1571,29 +1615,29 @@
                             }
                         }
                     });
-                    
+
                 } else if (isDash && dashjs) {
                     // DASH stream
                     dash = dashjs.MediaPlayer().create();
                     dash.initialize(videoPlayer, url, true);
                     dash.setAutoPlay(true);
-                    
+
                     dash.on('error', (e) => {
                         console.error('DASH error:', e);
                         // Try direct video as fallback
                         directVideoLoad(url);
                     });
-                    
+
                 } else {
                     // Direct video
                     directVideoLoad(url);
                 }
             }
-            
+
             // Direct video load
             function directVideoLoad(url) {
                 videoPlayer.src = url;
-                
+
                 videoPlayer.addEventListener('loadeddata', () => {
                     loading.classList.add('hidden');
                     videoPlayer.play().catch(e => {
@@ -1601,43 +1645,43 @@
                         loading.classList.add('hidden');
                     });
                 }, { once: true });
-                
+
                 videoPlayer.addEventListener('error', (e) => {
                     console.error('Video error:', e);
                     loading.classList.add('hidden');
                     alert('Failed to load video. Please check the URL and try again.');
                 });
             }
-            
+
             // Gesture handling
             let touchStartX = 0;
             let touchStartY = 0;
             let touchStartTime = 0;
-            
+
             playerOverlay.addEventListener('touchstart', (e) => {
                 touchStartX = e.touches[0].clientX;
                 touchStartY = e.touches[0].clientY;
                 touchStartTime = Date.now();
-                
+
                 // Show controls on touch
                 showControls();
             });
-            
+
             playerOverlay.addEventListener('touchend', (e) => {
                 const touchEndX = e.changedTouches[0].clientX;
                 const touchEndY = e.changedTouches[0].clientY;
                 const touchEndTime = Date.now();
-                
+
                 const deltaX = touchEndX - touchStartX;
                 const deltaY = touchEndY - touchStartY;
                 const deltaTime = touchEndTime - touchStartTime;
-                
+
                 // Single tap (if movement is small and time is short)
                 if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10 && deltaTime < 200) {
                     // Check for double tap
                     const currentTime = Date.now();
                     const timeSinceLastTap = currentTime - lastTapTime;
-                    
+
                     if (timeSinceLastTap < 300 && Math.abs(touchEndX - lastTapX) < 50) {
                         // Double tap
                         if (touchEndX > window.innerWidth / 2) {
@@ -1647,11 +1691,11 @@
                             // Left side - backward 10 seconds
                             videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
                         }
-                        
+
                         // Visual feedback
                         const feedback = document.createElement('div');
-                        feedback.innerHTML = touchEndX > window.innerWidth / 2 ? 
-                            '<i class="fas fa-forward"></i> +10s' : 
+                        feedback.innerHTML = touchEndX > window.innerWidth / 2 ?
+                            '<i class="fas fa-forward"></i> +10s' :
                             '<i class="fas fa-backward"></i> -10s';
                         feedback.style.cssText = `
                             position: absolute;
@@ -1666,13 +1710,13 @@
                             z-index: 100;
                         `;
                         playerContainer.appendChild(feedback);
-                        
+
                         setTimeout(() => feedback.remove(), 1000);
                     } else {
                         // Single tap - toggle play/pause
                         togglePlayPause();
                     }
-                    
+
                     lastTapTime = currentTime;
                     lastTapX = touchEndX;
                 }
@@ -1680,11 +1724,11 @@
                 else if (Math.abs(deltaX) > 50 && Math.abs(deltaY) < 50 && deltaTime < 500) {
                     const seekAmount = deltaX > 0 ? 15 : -15;
                     videoPlayer.currentTime = Math.max(0, Math.min(videoPlayer.duration, videoPlayer.currentTime + seekAmount));
-                    
+
                     // Visual feedback
                     const feedback = document.createElement('div');
-                    feedback.innerHTML = deltaX > 0 ? 
-                        '<i class="fas fa-forward"></i> +15s' : 
+                    feedback.innerHTML = deltaX > 0 ?
+                        '<i class="fas fa-forward"></i> +15s' :
                         '<i class="fas fa-backward"></i> -15s';
                     feedback.style.cssText = `
                         position: absolute;
@@ -1699,100 +1743,100 @@
                         z-index: 100;
                     `;
                     playerContainer.appendChild(feedback);
-                    
+
                     setTimeout(() => feedback.remove(), 1000);
                 }
-                
+
                 e.preventDefault();
             });
-            
+
             // Mouse events for desktop
             playerOverlay.addEventListener('click', () => {
                 if (!isMobile) {
                     togglePlayPause();
                 }
             });
-            
+
             playerOverlay.addEventListener('mousemove', () => {
                 if (!isMobile) {
                     showControls();
                 }
             });
-            
+
             // Event Listeners
             playBtn.addEventListener('click', () => {
                 loadVideo(videoUrlInput.value);
             });
-            
+
             // Clear link button
             const clearLinkBtn = document.getElementById('clearLinkBtn');
             clearLinkBtn.addEventListener('click', () => {
                 videoUrlInput.value = '';
                 videoUrlInput.focus();
             });
-            
+
             videoUrlInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     loadVideo(videoUrlInput.value);
                 }
             });
-            
+
             playPauseBtn.addEventListener('click', togglePlayPause);
-            
+
             stopBtn.addEventListener('click', () => {
                 videoPlayer.pause();
                 videoPlayer.currentTime = 0;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
                 isPlaying = false;
             });
-            
+
             rewindBtn.addEventListener('click', () => {
                 videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
             });
-            
+
             forwardBtn.addEventListener('click', () => {
                 videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 10);
             });
-            
+
             muteBtn.addEventListener('click', () => {
                 videoPlayer.muted = !videoPlayer.muted;
-                muteBtn.innerHTML = videoPlayer.muted ? 
-                    '<i class="fas fa-volume-mute"></i>' : 
+                muteBtn.innerHTML = videoPlayer.muted ?
+                    '<i class="fas fa-volume-mute"></i>' :
                     '<i class="fas fa-volume-up"></i>';
                 volumeSlider.value = videoPlayer.muted ? 0 : videoPlayer.volume;
             });
-            
+
             volumeSlider.addEventListener('input', () => {
                 videoPlayer.volume = volumeSlider.value;
                 videoPlayer.muted = volumeSlider.value == 0;
-                muteBtn.innerHTML = volumeSlider.value == 0 ? 
-                    '<i class="fas fa-volume-mute"></i>' : 
+                muteBtn.innerHTML = volumeSlider.value == 0 ?
+                    '<i class="fas fa-volume-mute"></i>' :
                     '<i class="fas fa-volume-up"></i>';
             });
-            
+
             speedSelect.addEventListener('change', () => {
                 videoPlayer.playbackRate = parseFloat(speedSelect.value);
             });
-            
+
             fullscreenBtn.addEventListener('click', toggleFullscreen);
-            
+
             progressContainer.addEventListener('click', (e) => {
                 const rect = progressContainer.getBoundingClientRect();
                 const percent = (e.clientX - rect.left) / rect.width;
                 videoPlayer.currentTime = percent * videoPlayer.duration;
                 updateProgress();
             });
-            
+
             // Video events
             videoPlayer.addEventListener('play', () => {
                 isPlaying = true;
                 playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                
+
                 // Auto fullscreen on play
                 if (!isFullscreen) {
                     setTimeout(() => {
                         enterFullscreen();
-                        
+
                         // Show rotate notice on mobile portrait
                         if (isMobile && window.innerHeight > window.innerWidth) {
                             rotateNotice.classList.add('active');
@@ -1800,20 +1844,20 @@
                     }, 300);
                 }
             });
-            
+
             videoPlayer.addEventListener('pause', () => {
                 isPlaying = false;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
             });
-            
+
             videoPlayer.addEventListener('timeupdate', updateProgress);
-            
+
             videoPlayer.addEventListener('loadedmetadata', setVideoDuration);
-            
+
             videoPlayer.addEventListener('ended', () => {
                 isPlaying = false;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-                
+
                 // Exit fullscreen when video ends
                 setTimeout(() => {
                     if (isFullscreen) {
@@ -1821,39 +1865,39 @@
                     }
                 }, 2000);
             });
-            
+
             videoPlayer.addEventListener('waiting', () => {
                 loading.classList.remove('hidden');
             });
-            
+
             videoPlayer.addEventListener('playing', () => {
                 loading.classList.add('hidden');
                 rotateNotice.classList.remove('active');
             });
-            
+
             // Fullscreen change events
             document.addEventListener('fullscreenchange', () => {
                 isFullscreen = !!document.fullscreenElement;
-                fullscreenBtn.innerHTML = isFullscreen ? 
-                    '<i class="fas fa-compress"></i>' : 
+                fullscreenBtn.innerHTML = isFullscreen ?
+                    '<i class="fas fa-compress"></i>' :
                     '<i class="fas fa-expand"></i>';
-                
+
                 if (!isFullscreen && isMobile) {
                     rotateNotice.classList.remove('active');
                 }
             });
-            
+
             document.addEventListener('webkitfullscreenchange', () => {
                 isFullscreen = !!document.webkitFullscreenElement;
-                fullscreenBtn.innerHTML = isFullscreen ? 
-                    '<i class="fas fa-compress"></i>' : 
+                fullscreenBtn.innerHTML = isFullscreen ?
+                    '<i class="fas fa-compress"></i>' :
                     '<i class="fas fa-expand"></i>';
-                
+
                 if (!isFullscreen && isMobile) {
                     rotateNotice.classList.remove('active');
                 }
             });
-            
+
             // Orientation change
             window.addEventListener('orientationchange', () => {
                 if (isMobile && isPlaying) {
@@ -1868,33 +1912,33 @@
                     }
                 }
             });
-            
+
             // Sample URLs for testing
             const sampleUrls = [
                 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
                 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
                 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
             ];
-            
+
             // Pre-fill with a sample URL for testing
             videoUrlInput.value = sampleUrls[0];
-            
+
             // Footer link handlers
             document.getElementById('privacyLink').addEventListener('click', (e) => {
                 e.preventDefault();
                 alert('Privacy Policy: We do not collect or store any data. All video playback happens directly in your browser.');
             });
-            
-                document.getElementById('aboutLink').addEventListener('click', (e) => {
+
+            document.getElementById('aboutLink').addEventListener('click', (e) => {
                 e.preventDefault();
                 alert('MeluaPlay v1.0 - Instant online video player\n\nFeatures:\n• Auto fullscreen playback\n• Mobile gesture controls\n• No login required\n• Supports multiple video formats');
             });
-            
+
             document.getElementById('helpLink').addEventListener('click', (e) => {
                 e.preventDefault();
                 alert('Help & Tips:\n\n1. Paste any direct video URL and click Play\n2. On mobile, video auto-rotates to landscape\n3. Use gestures: tap to play/pause, double-tap sides to seek, swipe to skip\n4. Use controls for volume, speed, and fullscreen toggle');
             });
-            
+
             // Donation handler
             const qrModal = document.getElementById('qrModal');
             const qrClose = document.getElementById('qrClose');
@@ -1902,62 +1946,62 @@
             const qrCodeImage = document.getElementById('qrCodeImage');
             const copyUpiBtn = document.getElementById('copyUpiBtn');
             const upiIdText = document.getElementById('upiIdText');
-            
+
             // Payment tabs
             const paymentTabBtns = document.querySelectorAll('.payment-tab-btn');
             const paymentTabContents = document.querySelectorAll('.payment-tab-content');
-            
+
             // Payment tab switching
             paymentTabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const tabName = btn.getAttribute('data-tab');
-                    
+
                     // Remove active class from all buttons and contents
                     paymentTabBtns.forEach(b => b.classList.remove('active'));
                     paymentTabContents.forEach(content => content.classList.remove('active'));
-                    
+
                     // Add active class to clicked button and corresponding content
                     btn.classList.add('active');
                     document.getElementById(tabName + '-tab').classList.add('active');
                 });
             });
-            
+
             // UPI ID
             const upiId = 'meluaplay@airtel';
-            
+
             // Generate dynamic QR code using qrserver API
             // UPI URL format: upi://pay?pa=UPI_ID
             const upiUrl = `upi://pay?pa=${upiId}`;
             const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiUrl)}`;
-            
+
             donateBtn.addEventListener('click', () => {
                 qrModal.classList.add('active');
                 // Generate QR code dynamically
                 qrCodeImage.src = qrCodeUrl;
             });
-            
+
             qrClose.addEventListener('click', () => {
                 qrModal.classList.remove('active');
             });
-            
+
             // Close modal when clicking outside
             qrModal.addEventListener('click', (e) => {
                 if (e.target === qrModal) {
                     qrModal.classList.remove('active');
                 }
             });
-            
+
             // Copy UPI ID functionality
             copyUpiBtn.addEventListener('click', () => {
                 const textToCopy = upiIdText.textContent;
-                
+
                 // Copy to clipboard
                 navigator.clipboard.writeText(textToCopy).then(() => {
                     // Show success feedback
                     const originalHTML = copyUpiBtn.innerHTML;
                     copyUpiBtn.classList.add('copied');
                     copyUpiBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                    
+
                     // Reset button after 2 seconds
                     setTimeout(() => {
                         copyUpiBtn.classList.remove('copied');
@@ -1971,30 +2015,30 @@
                     textarea.select();
                     document.execCommand('copy');
                     document.body.removeChild(textarea);
-                    
+
                     // Show success feedback
                     const originalHTML = copyUpiBtn.innerHTML;
                     copyUpiBtn.classList.add('copied');
                     copyUpiBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                    
+
                     setTimeout(() => {
                         copyUpiBtn.classList.remove('copied');
                         copyUpiBtn.innerHTML = originalHTML;
                     }, 2000);
                 });
             });
-            
+
             // History functionality
             const historyBtn = document.getElementById('historyBtn');
             const historyModal = document.getElementById('historyModal');
             const historyClose = document.getElementById('historyClose');
             const historyList = document.getElementById('historyList');
             const clearHistoryBtn = document.getElementById('clearHistoryBtn');
-            
+
             // LocalStorage key for history
             const HISTORY_KEY = 'meluaplay_history';
             const MAX_HISTORY_ITEMS = 20;
-            
+
             // Get video filename from URL
             function getVideoName(url) {
                 try {
@@ -2007,16 +2051,16 @@
                     return 'Video';
                 }
             }
-            
+
             // Save video to history
             function saveToHistory(url) {
                 if (!url.trim()) return;
-                
+
                 let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-                
+
                 // Remove if already exists (to avoid duplicates)
                 history = history.filter(item => item.url !== url);
-                
+
                 // Add new video to the beginning
                 const videoName = getVideoName(url);
                 history.unshift({
@@ -2024,26 +2068,26 @@
                     name: videoName,
                     timestamp: new Date().toLocaleString()
                 });
-                
+
                 // Keep only last 20 items
                 history = history.slice(0, MAX_HISTORY_ITEMS);
-                
+
                 // Save to localStorage
                 localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
-                
+
                 // Update display
                 displayHistory();
             }
-            
+
             // Display history
             function displayHistory() {
                 const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-                
+
                 if (history.length === 0) {
                     historyList.innerHTML = '<p class="empty-history">No videos played yet. Start playing videos to build your history!</p>';
                     return;
                 }
-                
+
                 historyList.innerHTML = history.map((item, index) => `
                     <div class="history-item">
                         <div class="history-item-info">
@@ -2056,32 +2100,32 @@
                     </div>
                 `).join('');
             }
-            
+
             // Play video from history
-            window.playFromHistory = function(url) {
+            window.playFromHistory = function (url) {
                 videoUrlInput.value = url;
                 historyModal.classList.remove('active');
                 loadVideo(url);
             };
-            
+
             // Open history modal
             historyBtn.addEventListener('click', () => {
                 historyModal.classList.add('active');
                 displayHistory();
             });
-            
+
             // Close history modal
             historyClose.addEventListener('click', () => {
                 historyModal.classList.remove('active');
             });
-            
+
             // Close modal when clicking outside
             historyModal.addEventListener('click', (e) => {
                 if (e.target === historyModal) {
                     historyModal.classList.remove('active');
                 }
             });
-            
+
             // Clear history
             clearHistoryBtn.addEventListener('click', () => {
                 if (confirm('Are you sure you want to clear all history?')) {
@@ -2089,11 +2133,11 @@
                     displayHistory();
                 }
             });
-            
+
             // Initialize
             updateProgress();
             showControls();
-            
+
             // PWA ready
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
@@ -2103,4 +2147,5 @@
         });
     </script>
 </body>
+
 </html>
