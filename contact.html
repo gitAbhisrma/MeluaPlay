@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MeluaPlay Instant Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #3b82f6; --primary-dark: #2563eb;
+            --bg: #0f172a; --surface: #1e293b; --surface-light: #334155;
+            --text: #f1f5f9; --text-secondary: #94a3b8;
+            --border-radius: 12px; --transition: all 0.3s ease;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.8;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+        .container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            flex: 1; display: flex; flex-direction: column; width: 100%;
+        }
+        header { text-align: center; padding: 20px 0 30px; border-bottom: 1px solid var(--surface-light); margin-bottom: 30px; }
+        .logo { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; text-decoration: none; }
+        .logo-icon { color: var(--primary); font-size: 28px; }
+        h1 { font-size: 2.2rem; background: linear-gradient(to right, var(--primary), #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
+        h1.page-title { color: var(--primary); font-size: 2.5rem; background: none; -webkit-background-clip: unset; background-clip: unset; text-align: center; margin-bottom: 30px; }
+        .tagline { color: var(--text-secondary); font-size: 1rem; margin-top: 5px; }
+        .page-content {
+            background: var(--surface); border-radius: var(--border-radius); padding: 40px; margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .page-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.8rem; }
+        .page-content h3 { color: #f1f5f9; margin-top: 25px; margin-bottom: 15px; font-size: 1.4rem; }
+        .page-content p { margin-bottom: 20px; font-size: 16px; color: var(--text); }
+        .page-content ul { margin-bottom: 20px; padding-left: 20px; }
+        .page-content li { margin-bottom: 10px; font-size: 16px; }
+        
+        .contact-box {
+            background: rgba(59, 130, 246, 0.1); border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: var(--border-radius); padding: 30px; text-align: center; margin: 40px 0;
+        }
+        .contact-email { font-size: 1.5rem; color: var(--primary); font-weight: bold; margin-top: 15px; }
+        .contact-email a { color: var(--primary); text-decoration: none; }
+        .contact-email a:hover { text-decoration: underline; }
+
+        footer { margin-top: auto; text-align: center; padding: 30px 0 20px; color: var(--text-secondary); font-size: 14px; border-top: 1px solid var(--surface-light); }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 15px 0; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; transition: var(--transition); }
+        .footer-links a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-play-circle logo-icon"></i>
+                <h1>MeluaPlay</h1>
+            </a>
+            <p class="tagline">Instant online video player with auto fullscreen & gesture controls</p>
+        </header>
+
+        <main class="page-content">
+            <h1 class="page-title">Contact Us</h1>
+            
+            <p><strong>Effective Date:</strong> April 4, 2026</p>
+
+            <h2>We Are Here to Help</h2>
+            <p>Welcome to the official Contact Us page of MeluaPlay. Whether you are encountering an unexpected technical issue, dreaming up a brilliant feature for our future roadmap, or exploring potential advertising and integration partnerships with us, your input is incredibly valuable. MeluaPlay represents a community-driven video platform, and our direct engagement with users is arguably our strongest asset. Our team is committed to transparency, swift communication, and fostering an ecosystem where users feel consistently supported.</p>
+            
+            <p>Because we operate entirely as an independent digital tool, avoiding massive corporate bureaucracy, we read and evaluate every single piece of legitimate correspondence we receive. Below, you will find comprehensive details on how to successfully contact us, specific guidelines on structuring your email depending on your inquiry, and what you can realistically expect regarding response times and resolutions.</p>
+
+            <div class="contact-box">
+                <i class="fas fa-envelope" style="font-size: 40px; color: var(--primary); margin-bottom: 10px;"></i>
+                <h3>Our Primary Communication Channel</h3>
+                <p>The most direct, reliable, and fastest way to reach the MeluaPlay team is via email.</p>
+                <div class="contact-email">
+                    <a href="mailto:melusharma265@gmail.com">melusharma265@gmail.com</a>
+                </div>
+            </div>
+
+            <h2>How to Classify Your Inquiry</h2>
+            <p>To assist our team in routing and responding to your email efficiently, we highly recommend defining the nature of your inquiry in your email subject line. Thousands of users visit MeluaPlay every day; categorized emails help us prioritize critical items, such as sudden site outages, over general usage questions. Please review the following categories before drafting your message.</p>
+
+            <h3>1. Technical Support and Bug Reports</h3>
+            <p>While we painstakingly test MeluaPlay across popular browsers like Chrome, Firefox, Safari, and Edge, the sheer diversity of browser versions, operating systems, hardware combinations, and video encodings means you might occasionally run into a glitch. If a certain video link refuses to play despite being a supported format (MP4, MKV, M3U8, etc.), or if a UI element misbehaves on your mobile device, please hit us with a bug report.</p>
+            <p>When reporting a technical bug, please use the subject line <strong>[Bug Report] Let us know the issue</strong>. To help us reproduce and squash the bug swiftly, kindly include:</p>
+            <ul>
+                <li>The operating system you're currently using (e.g., Windows 11, iOS 16, Android 13).</li>
+                <li>The web browser and its approximate version (e.g., Google Chrome v118).</li>
+                <li>The specific URL of the video that failed to play (if applicable and safe to share).</li>
+                <li>A step-by-step descriptive summary of the actions you took prior to encountering the bug.</li>
+                <li>Screenshots illustrating any error messages or visual anomalies, if possible.</li>
+            </ul>
+
+            <h3>2. Feature Requests and Suggestions</h3>
+            <p>MeluaPlay has dramatically evolved based directly on the feedback provided by our user base. We initially launched with basic capabilities, growing into a powerhouse handling DASH and HLS streams thanks strictly to community insight. If you possess a fantastic concept that you believe will enhance the playback experience or make MeluaPlay more accessible to diverse demographics, we truly want to hear it.</p>
+            <p>When suggesting new capabilities, please utilize the subject line <strong>[Feature Request] Brief description of the idea</strong>. Lay out explicitly how the suggested feature would function and, most importantly, the specific problem it would eradicate for you or other regular viewers. While we naturally cannot implement every proposition due to technological or resource constraints, every single suggestion is reviewed during our developmental roadmap meetings.</p>
+
+            <h3>3. Advertising and Commercial Partnerships</h3>
+            <p>MeluaPlay draws a vast aggregate of daily traffic comprising users highly invested in multimedia, technology, streaming, and digital entertainment. Consequently, we offer premium advertising slots prominently located within our interface that guarantee high visibility and excellent click-through rates. Should you represent a brand, tech startup, or ad network wishing to deploy campaigns on our platform, we welcome collaboration.</p>
+            <p>For commercial intentions, please structure your subject line as <strong>[Partnership/Advertising] Brand Name</strong>. In the email body, explicitly specify your marketing goals, desired advertising real estate (e.g., ad-slot-left, ad-slot-bottom), estimated duration of the campaign, and realistic budgetary approximations. We pride ourselves on crafting mutually beneficial custom agreements tailored appropriately to your campaign’s specific metrics and demographic targets.</p>
+
+            <h3>4. DMCA and Copyright Inquiries</h3>
+            <p>It is imperative to note that MeluaPlay functions purely as a client-side video interface. We do not maintain any servers harboring video files, nor do we host, upload, or syndicate copyright-protected material. Our player fundamentally acts as a magnifying glass, locally rendering data from URLs provided independently by the user. Because we lack access to the originating servers where these files reside, we cannot 'takedown' content fundamentally.</p>
+            <p>However, we take digital rights management (DRM) and intellectual property severely. If you hold copyrights to specific materials and require guidance regarding how these streams function independently of our site, you may email us using the subject line <strong>[DMCA Inquiry]</strong>. Be advised that legally binding takedown notices must be directed to the actual storage hosts (e.g., Google Drive, AWS, independent file lockers) rather than our player utility, as we hold absolutely zero control over external server contents.</p>
+
+            <h2>Expected Response Times</h2>
+            <p>We approach communication with enthusiasm, yet we are a relatively small operation handling substantial volumes of traffic. Therefore, we generally require approximately 24 to 48 business hours to properly review and reply to your emails. We humbly request your patience during high-volume periods or major developmental rollouts.</p>
+
+            <p>Be assured, regardless of whether you are reporting a minor UI misalignment or proposing a massive commercial synergy, your message will not vanish into an automated void. A real human being attached to the core MeluaPlay development team handles our inbox.</p>
+
+
+            <p>Thank you immeasurably for utilizing MeluaPlay. Your views, streams, and continued engagement constitute the foundation of our success, and your messages provide the architectural blueprint for our future. We eagerly anticipate hearing from you today.</p>
+        </main>
+
+        <footer>
+            <p>MeluaPlay - Instant Online Video Player</p>
+            <p>No login required, completely free</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px;">Works with most direct video links and streaming formats</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -578,18 +578,6 @@
             color: var(--primary);
         }
 
-        .btn-donate {
-            background: linear-gradient(to right, #ef4444, #dc2626);
-            color: white;
-            margin-top: 15px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .btn-donate:hover {
-            background: linear-gradient(to right, #dc2626, #b91c1c);
-            transform: translateY(-2px);
-        }
 
         /* Mobile optimizations */
         @media (max-width: 768px) {
@@ -722,227 +710,6 @@
 
             100% {
                 transform: rotate(360deg);
-            }
-        }
-
-        /* QR Modal Styles */
-        .qr-modal {
-            display: none;
-            position: fixed;
-            z-index: 200;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .qr-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .qr-modal-content {
-            background-color: var(--surface);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            animation: slideUp 0.3s ease;
-        }
-
-        .qr-close {
-            color: var(--text-secondary);
-            float: right;
-            font-size: 32px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .qr-close:hover {
-            color: var(--text);
-        }
-
-        .qr-modal-content h2 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-
-        .qr-modal-content p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .qr-code-container {
-            background: white;
-            padding: 15px;
-            border-radius: var(--border-radius);
-            display: inline-block;
-        }
-
-        .qr-code-image {
-            width: 280px;
-            height: 280px;
-            display: block;
-        }
-
-        .upi-info {
-            margin-top: 25px;
-            padding: 15px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: var(--border-radius);
-            border: 2px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .upi-id-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--bg);
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid var(--surface-light);
-            gap: 10px;
-        }
-
-        #upiIdText {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 16px;
-            font-family: 'Courier New', monospace;
-            word-break: break-all;
-            flex: 1;
-        }
-
-        .copy-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 8px 12px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            white-space: nowrap;
-            font-weight: 500;
-        }
-
-        .copy-btn:hover {
-            background: var(--primary-dark);
-            transform: scale(1.05);
-        }
-
-        .copy-btn.copied {
-            background: var(--success);
-        }
-
-        /* Payment Tabs Styles */
-        .payment-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--surface-light);
-        }
-
-        .payment-tab-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            padding: 12px 20px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .payment-tab-btn:hover {
-            color: var(--text);
-        }
-
-        .payment-tab-btn.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-
-        .payment-tab-content {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .payment-tab-content.active {
-            display: block;
-        }
-
-        .paypal-info {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: var(--border-radius);
-            border: 2px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .paypal-info a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .qr-modal-content {
-                padding: 20px;
-            }
-
-            .qr-code-image {
-                width: 220px;
-                height: 220px;
-            }
-
-            .upi-id-box {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            #upiIdText {
-                font-size: 14px;
-            }
-
-            .copy-btn {
-                width: 100%;
-                justify-content: center;
             }
         }
 
@@ -1154,9 +921,6 @@
                             <i class="fas fa-times"></i> Clear
                         </button>
                     </div>
-                    <button id="donateBtn" class="btn btn-donate">
-                        <i class="fas fa-heart"></i> Support Us - Donate
-                    </button>
                     <a href="https://github.com/gitAbhisrma/HindPlayer---URL-Player/releases/download/v1.0/Hind.Player.-v1_0_47.apk" class="btn btn-primary" style="margin-top: 10px; text-decoration: none; width: 100%; justify-content: center;">
                         <i class="fas fa-download"></i> Download App
                     </a>
@@ -1313,65 +1077,17 @@
             <p>MeluaPlay - Instant Online Video Player</p>
             <p>No login required, completely free</p>
             <div class="footer-links">
-                <a href="#" id="privacyLink">Privacy</a>
-                <a href="#" id="aboutLink">About</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html" id="privacyLink">Privacy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
                 <a href="#" id="helpLink">Help</a>
             </div>
             <p style="margin-top: 20px; font-size: 12px;">Works with most direct video links and streaming formats</p>
         </footer>
 
-        <!-- Donate Modal -->
-        <div class="qr-modal" id="qrModal">
-            <div class="qr-modal-content">
-                <span class="qr-close" id="qrClose">&times;</span>
-                <h2>Support Us - Donate</h2>
-                <p style="margin-bottom: 20px; color: var(--text-secondary);">Choose your preferred payment method</p>
-
-                <!-- Payment Method Tabs -->
-                <div class="payment-tabs">
-                    <button class="payment-tab-btn active" data-tab="upi">
-                        <i class="fas fa-mobile-alt"></i> UPI
-                    </button>
-                    <button class="payment-tab-btn" data-tab="paypal">
-                        <i class="fab fa-paypal"></i> PayPal
-                    </button>
-                </div>
-
-                <!-- UPI Tab -->
-                <div class="payment-tab-content active" id="upi-tab">
-                    <div class="qr-code-container">
-                        <img id="qrCodeImage" src="" alt="UPI QR Code for meluaplay@airtel" class="qr-code-image"
-                            loading="lazy">
-                    </div>
-
-                    <div class="upi-info">
-                        <p style="margin-bottom: 10px; color: var(--text-secondary);">UPI ID:</p>
-                        <div class="upi-id-box">
-                            <span id="upiIdText">meluaplay@airtel</span>
-                            <button id="copyUpiBtn" class="copy-btn" title="Copy UPI ID">
-                                <i class="fas fa-copy"></i> Copy
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PayPal Tab -->
-                <div class="payment-tab-content" id="paypal-tab">
-                    <div class="paypal-info">
-                        <i class="fab fa-paypal"
-                            style="font-size: 48px; color: var(--primary); margin-bottom: 15px;"></i>
-                        <p style="margin-bottom: 15px; color: var(--text-secondary);">Donate securely via PayPal</p>
-                        <a href="https://www.paypal.com/ncp/payment/5WDTYQLB5ZZ4G" target="_blank"
-                            class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-external-link-alt"></i> Open PayPal
-                        </a>
-                    </div>
-                </div>
-
-                <p style="margin-top: 15px; color: var(--text-secondary); font-size: 12px;">Thank you for your support!
-                    🙏</p>
-            </div>
-        </div>
 
         <!-- History Modal -->
         <div class="history-modal" id="historyModal">
@@ -1926,110 +1642,13 @@
             // Pre-fill with a sample URL for testing
             videoUrlInput.value = sampleUrls[0];
 
-            // Footer link handlers
-            document.getElementById('privacyLink').addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('Privacy Policy: We do not collect or store any data. All video playback happens directly in your browser.');
-            });
-
-            document.getElementById('aboutLink').addEventListener('click', (e) => {
-                e.preventDefault();
-                alert('MeluaPlay v1.0 - Instant online video player\n\nFeatures:\n• Auto fullscreen playback\n• Mobile gesture controls\n• No login required\n• Supports multiple video formats');
-            });
-
+            // Footer help handler
             document.getElementById('helpLink').addEventListener('click', (e) => {
                 e.preventDefault();
                 alert('Help & Tips:\n\n1. Paste any direct video URL and click Play\n2. On mobile, video auto-rotates to landscape\n3. Use gestures: tap to play/pause, double-tap sides to seek, swipe to skip\n4. Use controls for volume, speed, and fullscreen toggle');
             });
 
             // Donation handler
-            const qrModal = document.getElementById('qrModal');
-            const qrClose = document.getElementById('qrClose');
-            const donateBtn = document.getElementById('donateBtn');
-            const qrCodeImage = document.getElementById('qrCodeImage');
-            const copyUpiBtn = document.getElementById('copyUpiBtn');
-            const upiIdText = document.getElementById('upiIdText');
-
-            // Payment tabs
-            const paymentTabBtns = document.querySelectorAll('.payment-tab-btn');
-            const paymentTabContents = document.querySelectorAll('.payment-tab-content');
-
-            // Payment tab switching
-            paymentTabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const tabName = btn.getAttribute('data-tab');
-
-                    // Remove active class from all buttons and contents
-                    paymentTabBtns.forEach(b => b.classList.remove('active'));
-                    paymentTabContents.forEach(content => content.classList.remove('active'));
-
-                    // Add active class to clicked button and corresponding content
-                    btn.classList.add('active');
-                    document.getElementById(tabName + '-tab').classList.add('active');
-                });
-            });
-
-            // UPI ID
-            const upiId = 'meluaplay@airtel';
-
-            // Generate dynamic QR code using qrserver API
-            // UPI URL format: upi://pay?pa=UPI_ID
-            const upiUrl = `upi://pay?pa=${upiId}`;
-            const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiUrl)}`;
-
-            donateBtn.addEventListener('click', () => {
-                qrModal.classList.add('active');
-                // Generate QR code dynamically
-                qrCodeImage.src = qrCodeUrl;
-            });
-
-            qrClose.addEventListener('click', () => {
-                qrModal.classList.remove('active');
-            });
-
-            // Close modal when clicking outside
-            qrModal.addEventListener('click', (e) => {
-                if (e.target === qrModal) {
-                    qrModal.classList.remove('active');
-                }
-            });
-
-            // Copy UPI ID functionality
-            copyUpiBtn.addEventListener('click', () => {
-                const textToCopy = upiIdText.textContent;
-
-                // Copy to clipboard
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    // Show success feedback
-                    const originalHTML = copyUpiBtn.innerHTML;
-                    copyUpiBtn.classList.add('copied');
-                    copyUpiBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-
-                    // Reset button after 2 seconds
-                    setTimeout(() => {
-                        copyUpiBtn.classList.remove('copied');
-                        copyUpiBtn.innerHTML = originalHTML;
-                    }, 2000);
-                }).catch(() => {
-                    // Fallback for older browsers
-                    const textarea = document.createElement('textarea');
-                    textarea.value = textToCopy;
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textarea);
-
-                    // Show success feedback
-                    const originalHTML = copyUpiBtn.innerHTML;
-                    copyUpiBtn.classList.add('copied');
-                    copyUpiBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-
-                    setTimeout(() => {
-                        copyUpiBtn.classList.remove('copied');
-                        copyUpiBtn.innerHTML = originalHTML;
-                    }, 2000);
-                });
-            });
 
             // History functionality
             const historyBtn = document.getElementById('historyBtn');

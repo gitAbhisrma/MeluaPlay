@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MeluaPlay Instant Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #3b82f6; --primary-dark: #2563eb;
+            --bg: #0f172a; --surface: #1e293b; --surface-light: #334155;
+            --text: #f1f5f9; --text-secondary: #94a3b8;
+            --border-radius: 12px; --transition: all 0.3s ease;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.8;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+        .container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            flex: 1; display: flex; flex-direction: column; width: 100%;
+        }
+        header { text-align: center; padding: 20px 0 30px; border-bottom: 1px solid var(--surface-light); margin-bottom: 30px; }
+        .logo { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; text-decoration: none; }
+        .logo-icon { color: var(--primary); font-size: 28px; }
+        h1 { font-size: 2.2rem; background: linear-gradient(to right, var(--primary), #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
+        h1.page-title { color: var(--primary); font-size: 2.5rem; background: none; -webkit-background-clip: unset; background-clip: unset; text-align: center; margin-bottom: 30px; }
+        .tagline { color: var(--text-secondary); font-size: 1rem; margin-top: 5px; }
+        .page-content {
+            background: var(--surface); border-radius: var(--border-radius); padding: 40px; margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .page-content h2 { color: var(--primary); margin-top: 30px; margin-bottom: 15px; font-size: 1.8rem; }
+        .page-content h3 { color: #f1f5f9; margin-top: 25px; margin-bottom: 15px; font-size: 1.4rem; }
+        .page-content p { margin-bottom: 20px; font-size: 16px; color: var(--text); }
+        .page-content ul { margin-bottom: 20px; padding-left: 20px; }
+        .page-content li { margin-bottom: 10px; font-size: 16px; }
+        footer { margin-top: auto; text-align: center; padding: 30px 0 20px; color: var(--text-secondary); font-size: 14px; border-top: 1px solid var(--surface-light); }
+        .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin: 15px 0; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; transition: var(--transition); }
+        .footer-links a:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-play-circle logo-icon"></i>
+                <h1>MeluaPlay</h1>
+            </a>
+            <p class="tagline">Instant online video player with auto fullscreen & gesture controls</p>
+        </header>
+
+        <main class="page-content">
+            <h1 class="page-title">Privacy Policy</h1>
+            
+            <p><strong>Effective Date:</strong> April 4, 2026</p>
+
+            <h2>Overview</h2>
+            <p>Welcome to MeluaPlay. Your privacy is of paramount importance to us. This Privacy Policy document explicitly outlines the types of information we do and do not collect, how we handle user interactions within our platform, and our steadfast commitment to safeguarding your digital footprint. Operating primarily as a client-side utility—a simple web-based player connecting users directly to their selected video URLs—MeluaPlay was intrinsically structured to process as little private data as functionally possible.</p>
+
+            <p>By accessing and utilizing MeluaPlay's services, you signify your unreserved acceptance of the procedures and practices described within this Privacy Policy. Should you strongly disagree with any segment of this document, we politely advise ceasing usage of our platform. However, rest assured that our policies are designed heavily in favor of absolute user confidentiality, anonymity, and data minimalism.</p>
+
+            <h2>Information We Do NOT Collect</h2>
+            <p>We believe deeply in transparency, and the best way to prove our dedication to your privacy is by clarifying what we completely avoid capturing. MeluaPlay operates on a "sandbox" framework. Because we function as a software bridge rather than a destination server, we have zero interest in identifying our individual users.</p>
+            <ul>
+                <li><strong>No Personal Identifiable Information (PII):</strong> We will never ask you to create an account, register a profile, input an email address, or provide a real name merely to utilize our core playback functions.</li>
+                <li><strong>No Video URL Logging:</strong> We do absolutely zero server-side logging of the direct video URLs you paste into our player. Your inputs remain strictly between you, your specific web browser, and the third-party server hosting the actual video.</li>
+                <li><strong>No Biometric or Location Data:</strong> We do not systematically track your GPS location, physical IP address footprint (outside of temporary analytical routing), or any hardware-level device identifiers for the purposes of generating personal profiles.</li>
+            </ul>
+
+            <h2>Data Processed Locally (Local Storage)</h2>
+            <p>To enhance your user experience, we employ local browser methodologies. When you utilize our unique "Video History" feature—which permits you to rapidly resume previously inputted video streams—this information is written securely to your device's <strong>Local Storage</strong>.</p>
+            <p>Local Storage acts identically to a localized notepad residing exclusively on your personal hardware (be it a smartphone or PC). This "history" cache never transmits back to MeluaPlay’s servers. It exists entirely insulated within your distinct web browser environment. If you desire to completely erase this data footprint, you may seamlessly do so by selecting the 'Clear History' button physically present within our history modal or simply explicitly clearing your web browser's overarching cache data.</p>
+
+            <h2>Third-Party Analytics and Tracking Tools</h2>
+            <p>To fundamentally comprehend how our website performs under duress and to gather aggregate data regarding visitor locations and operational issues, we leverage standard third-party analytics solutions, notably Google Analytics (gtag.js).</p>
+            <p>Google Analytics operates by placing non-intrusive 'cookies' onto your machine to measure general traffic paradigms. For instance, we may analyze statistical metrics showing that 30% of our daily users access the site via mobile platforms. This aggregated, anonymized metric empowers us to dedicate developmental resources towards enhancing our mobile-friendly UI, gesture controls, and auto-rotation frameworks.</p>
+            <p>These analytics tools may log generic variables such as your approximate geographical region, basic browser type, operating system version, and general referring URLs. Please bear in mind that this data pool remains comprehensively anonymized, completely blocking us from mapping specific browsing habits to individual personalities. You retain the absolute right to opt-out of Google Analytics by employing standard ad-blocking extensions or disabling cookies natively within your browser configurations.</p>
+
+            <h2>Handling of Third-Party Video Hosts</h2>
+            <p>Because the core functionality of MeluaPlay involves loading video files explicitly designated by you (the user) from independent, external servers, it is crucial to recognize how these third parties might interact with your machine.</p>
+            <p>When you input a video URL originating from an external server (e.g., AWS, a personal cloud drive, or an independent file host), your browser establishes an immediate, direct connection with that exact foreign entity to download the video packets. Consequently, that distinctive third-party server holds the capacity to monitor the IP address requesting their file. We exercise zero influence, authority, or oversight regarding the privacy practices, logging routines, or security deployments of these third-party domains. Any data shared directly between your system and the video's origin server is entirely separate from MeluaPlay’s jurisdiction.</p>
+
+            <h2>Advertising and Commercial Partners</h2>
+            <p>To support server hosting operations, domain registries, and ongoing developmental enhancements, MeluaPlay occasionally integrates advertisements via specified digital banners (e.g., ad-slot-left, ad-slot-right). When these slots are occupied by third-party ad networks, these entities may autonomously utilize their respective cookies, web beacons, or tracking pixels to quantify advertising efficacy or deliver geo-targeted content.</p>
+            <p>Generally, these third-party advert frameworks fall strictly under their respective standalone privacy doctrines. MeluaPlay does not forward or sell compiled databases of user routines to these advertising blocks, seeing as we inherently deny possessing such databases.</p>
+
+            <h2>Data Security and Protection Protocols</h2>
+            <p>Despite possessing little to no sensitive user data, we still adhere rigorously to modern security encryption. All traffic communicating through the MeluaPlay platform is guarded tightly by standard Transport Layer Security (HTTPS). This encrypted shield ensures that any communication established between your browser and our interface—no matter how innocuous—remains strongly protected against unsolicited interception or malicious packet sniffing carried out by bad actors operating on open Wi-Fi networks.</p>
+
+            <h2>Children’s Privacy Awareness (COPPA)</h2>
+            <p>MeluaPlay serves as a generalized software utility targeting a broad demographic. We do not explicitly market our services towards individuals under the age of 13. Furthermore, because our entire platform operates autonomously without account requirements, we knowingly possess absolutely zero avenues for collecting data referencing minors. If a parent, guardian, or legal authority becomes aware that a minor has somehow breached standard protocols to transmit identifiable information uniquely referencing them to our servers, we urge you to contact us immediately using our official email to coordinate a swift, permanent data deletion.</p>
+
+            <h2>Changes and Amendments to This Policy</h2>
+            <p>The technological ecosystem undergoes constant paradigm shifts. Consequently, MeluaPlay reserves the immutable right to dynamically update, heavily revise, or minorly tweak this Privacy Policy to ensure regulatory compliance or accurately reflect backend architectural upgrades. Any notable iterations will be quietly published exactly upon this specific web page. We kindly recommend occasionally returning to this sector to familiarize yourself with how we persistently adapt our security deployments seamlessly favoring you.</p>
+
+            <h2>Contacting Our Privacy Officer</h2>
+            <p>If you retain any lingering questions, overarching concerns, or profound suggestions intimately involving this specific Privacy Policy or the generalized handling of our website’s overarching backend databases, our communication bridges remain continually extended. Please dispatch formal emails addressing these specific issues to our primary inbox at <strong>melusharma265@gmail.com</strong>. We diligently evaluate all incoming privacy-related correspondence to maintain supreme user confidence.</p>
+        </main>
+
+        <footer>
+            <p>MeluaPlay - Instant Online Video Player</p>
+            <p>No login required, completely free</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="terms.html">Terms & Conditions</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px;">Works with most direct video links and streaming formats</p>
+        </footer>
+    </div>
+</body>
+</html>
