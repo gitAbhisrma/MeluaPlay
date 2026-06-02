@@ -85,7 +85,25 @@
             width: 100%;
             min-height: 100px;
             margin: 20px 0 20px 0;
-            padding: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background: transparent;
+        }
+
+        .ad-slot-bottom img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .ad-slot-bottom img:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .ad-placeholder {
@@ -298,7 +316,6 @@
             z-index: 20;
         }
 
-        .player-container:hover .controls-container,
         .player-container.touch-active .controls-container {
             transform: translateY(0);
         }
@@ -922,12 +939,16 @@
                             <i class="fas fa-times"></i> Clear
                         </button>
                     </div>
-                    <a href="https://github.com/gitAbhisrma/HindPlayer---URL-Player/releases/download/v1.0/Hind.Player.-v1_0_47.apk" class="btn btn-primary" style="margin-top: 10px; text-decoration: none; width: 100%; justify-content: center;">
-                        <i class="fas fa-download"></i> Download App
-                    </a>
+
                     <button id="historyBtn" class="btn btn-secondary" style="margin-top: 10px;">
                         <i class="fas fa-history"></i> History
                     </button>
+                    <!-- Ad Slot - Under History -->
+                    <div class="ad-slot ad-slot-bottom" style="margin: 10px 0 5px 0;">
+                        <a href="https://gokali.pro" target="_blank" style="width: 100%; display: block; text-align: center;">
+                            <img src="IMG_5948.PNG" alt="Go Kali AI Banner">
+                        </a>
+                    </div>
                     <div class="formats">
                         <span>Supported formats:</span>
                         <span class="format-tag">MP4</span>
@@ -1062,17 +1083,6 @@
             </div>
         </main>
 
-        <!-- Ad Slot - Bottom/Lower Side -->
-        <div class="ad-slot ad-slot-bottom">
-            <div class="ad-placeholder">
-                <i class="fas fa-image"></i>
-                <p><strong>📢 Advertise Your Brand Here</strong></p>
-                <p style="font-size: 13px; margin-top: 8px;">Perfect placement for brand logos & promotional links</p>
-                <p style="font-size: 11px; color: var(--text-secondary); margin-top: 8px;">Reach thousands of video
-                    streaming users | Email: <a href="mailto:melusharma265@gmail.com"
-                        style="color: var(--primary); text-decoration: none;">melusharma265@gmail.com</a></p>
-            </div>
-        </div>
 
         <footer>
             <p>MeluaPlay - Instant Online Video Player</p>
@@ -1264,9 +1274,12 @@
                 playerContainer.classList.add('touch-active');
                 clearTimeout(controlsTimeout);
 
-                controlsTimeout = setTimeout(() => {
-                    playerContainer.classList.remove('touch-active');
-                }, 3000);
+                // Auto-hide after 5 seconds only if video is playing
+                if (!videoPlayer.paused) {
+                    controlsTimeout = setTimeout(() => {
+                        playerContainer.classList.remove('touch-active');
+                    }, 5000);
+                }
             }
 
             // Load and play video
@@ -1300,10 +1313,10 @@
                 playerContainer.classList.add('active');
 
                 // Check if URL is HLS or DASH
-                const isHls = url.includes('.m3u8');
-                const isDash = url.includes('.mpd');
+                const isHls = url.toLowerCase().includes('.m3u8');
+                const isDash = url.toLowerCase().includes('.mpd');
 
-                if (isHls && Hls.isSupported()) {
+                if (isHls && typeof Hls !== 'undefined' && Hls.isSupported()) {
                     // HLS stream
                     hls = new Hls({
                         enableWorker: true,
@@ -1336,7 +1349,7 @@
                         }
                     });
 
-                } else if (isDash && dashjs) {
+                } else if (isDash && typeof dashjs !== 'undefined') {
                     // DASH stream
                     dash = dashjs.MediaPlayer().create();
                     dash.initialize(videoPlayer, url, true);
@@ -1396,8 +1409,11 @@
                 const deltaY = touchEndY - touchStartY;
                 const deltaTime = touchEndTime - touchStartTime;
 
+                let actionHandled = false;
+
                 // Single tap (if movement is small and time is short)
                 if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10 && deltaTime < 200) {
+                    actionHandled = true;
                     // Check for double tap
                     const currentTime = Date.now();
                     const timeSinceLastTap = currentTime - lastTapTime;
@@ -1442,8 +1458,13 @@
                 }
                 // Swipe (horizontal movement > 50px, vertical movement < 50px)
                 else if (Math.abs(deltaX) > 50 && Math.abs(deltaY) < 50 && deltaTime < 500) {
+                    actionHandled = true;
                     const seekAmount = deltaX > 0 ? 15 : -15;
-                    videoPlayer.currentTime = Math.max(0, Math.min(videoPlayer.duration, videoPlayer.currentTime + seekAmount));
+                    if (videoPlayer.duration && isFinite(videoPlayer.duration)) {
+                        videoPlayer.currentTime = Math.max(0, Math.min(videoPlayer.duration, videoPlayer.currentTime + seekAmount));
+                    } else {
+                        videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime + seekAmount);
+                    }
 
                     // Visual feedback
                     const feedback = document.createElement('div');
@@ -1451,24 +1472,26 @@
                         '<i class="fas fa-forward"></i> +15s' :
                         '<i class="fas fa-backward"></i> -15s';
                     feedback.style.cssText = `
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background: rgba(0,0,0,0.7);
-                        color: white;
-                        padding: 10px 15px;
-                        border-radius: 10px;
-                        font-size: 16px;
-                        z-index: 100;
+                         position: absolute;
+                         top: 50%;
+                         left: 50%;
+                         transform: translate(-50%, -50%);
+                         background: rgba(0,0,0,0.7);
+                         color: white;
+                         padding: 10px 15px;
+                         border-radius: 10px;
+                         font-size: 16px;
+                         z-index: 100;
                     `;
                     playerContainer.appendChild(feedback);
 
                     setTimeout(() => feedback.remove(), 1000);
                 }
 
-                e.preventDefault();
-            });
+                if (actionHandled && e.cancelable) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
 
             // Mouse events for desktop
             playerOverlay.addEventListener('click', () => {
@@ -1485,6 +1508,7 @@
 
             // Event Listeners
             playBtn.addEventListener('click', () => {
+                enterFullscreen();
                 loadVideo(videoUrlInput.value);
             });
 
@@ -1497,6 +1521,7 @@
 
             videoUrlInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
+                    enterFullscreen();
                     loadVideo(videoUrlInput.value);
                 }
             });
@@ -1515,7 +1540,11 @@
             });
 
             forwardBtn.addEventListener('click', () => {
-                videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 10);
+                if (videoPlayer.duration && isFinite(videoPlayer.duration)) {
+                    videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 10);
+                } else {
+                    videoPlayer.currentTime += 10;
+                }
             });
 
             muteBtn.addEventListener('click', () => {
@@ -1541,33 +1570,30 @@
             fullscreenBtn.addEventListener('click', toggleFullscreen);
 
             progressContainer.addEventListener('click', (e) => {
-                const rect = progressContainer.getBoundingClientRect();
-                const percent = (e.clientX - rect.left) / rect.width;
-                videoPlayer.currentTime = percent * videoPlayer.duration;
-                updateProgress();
+                if (videoPlayer.duration && isFinite(videoPlayer.duration)) {
+                    const rect = progressContainer.getBoundingClientRect();
+                    const percent = (e.clientX - rect.left) / rect.width;
+                    videoPlayer.currentTime = percent * videoPlayer.duration;
+                    updateProgress();
+                }
             });
 
             // Video events
             videoPlayer.addEventListener('play', () => {
                 isPlaying = true;
                 playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                showControls();
 
-                // Auto fullscreen on play
-                if (!isFullscreen) {
-                    setTimeout(() => {
-                        enterFullscreen();
-
-                        // Show rotate notice on mobile portrait
-                        if (isMobile && window.innerHeight > window.innerWidth) {
-                            rotateNotice.classList.add('active');
-                        }
-                    }, 300);
+                // Show rotate notice on mobile portrait
+                if (isMobile && window.innerHeight > window.innerWidth) {
+                    rotateNotice.classList.add('active');
                 }
             });
 
             videoPlayer.addEventListener('pause', () => {
                 isPlaying = false;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                showControls();
             });
 
             videoPlayer.addEventListener('timeupdate', updateProgress);
@@ -1577,6 +1603,7 @@
             videoPlayer.addEventListener('ended', () => {
                 isPlaying = false;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                showControls();
 
                 // Exit fullscreen when video ends
                 setTimeout(() => {
@@ -1702,6 +1729,16 @@
                 displayHistory();
             }
 
+            // Escape HTML helper to prevent XSS
+            function escapeHTML(str) {
+                return str
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#039;');
+            }
+
             // Display history
             function displayHistory() {
                 const history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
@@ -1711,23 +1748,43 @@
                     return;
                 }
 
-                historyList.innerHTML = history.map((item, index) => `
-                    <div class="history-item">
-                        <div class="history-item-info">
-                            <div class="history-item-name"><i class="fas fa-video"></i> ${item.name}</div>
-                            <div class="history-item-date">${item.timestamp}</div>
-                        </div>
-                        <button class="history-item-play" onclick="playFromHistory('${item.url.replace(/'/g, "\\'")}')">
-                            <i class="fas fa-play"></i> Play
-                        </button>
-                    </div>
-                `).join('');
+                historyList.innerHTML = '';
+                history.forEach((item) => {
+                    const historyItem = document.createElement('div');
+                    historyItem.className = 'history-item';
+
+                    const info = document.createElement('div');
+                    info.className = 'history-item-info';
+
+                    const name = document.createElement('div');
+                    name.className = 'history-item-name';
+                    name.innerHTML = `<i class="fas fa-video"></i> ${escapeHTML(item.name)}`;
+
+                    const date = document.createElement('div');
+                    date.className = 'history-item-date';
+                    date.textContent = item.timestamp;
+
+                    info.appendChild(name);
+                    info.appendChild(date);
+
+                    const playBtn = document.createElement('button');
+                    playBtn.className = 'history-item-play';
+                    playBtn.innerHTML = '<i class="fas fa-play"></i> Play';
+                    playBtn.addEventListener('click', () => {
+                        playFromHistory(item.url);
+                    });
+
+                    historyItem.appendChild(info);
+                    historyItem.appendChild(playBtn);
+                    historyList.appendChild(historyItem);
+                });
             }
 
             // Play video from history
             window.playFromHistory = function (url) {
                 videoUrlInput.value = url;
                 historyModal.classList.remove('active');
+                enterFullscreen();
                 loadVideo(url);
             };
 
